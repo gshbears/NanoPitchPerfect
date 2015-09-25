@@ -47,27 +47,55 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
     }
 
+    @IBAction func PlayReverbSound(sender: UIButton) {
+        PlayAudioWithPitch(50)
+    }
+    func PlayAudioWithPitch(wetDryMix:Float){
+        stopResetEngine()
+        
+        let audioPlayerNode =  AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let changeWetDryMix = AVAudioUnitReverb()
+        changeWetDryMix.wetDryMix = wetDryMix
+        
+        audioEngine.attachNode(changeWetDryMix)
+        audioEngine.connect(audioPlayerNode, to: changeWetDryMix, format: nil)
+        audioEngine.connect(changeWetDryMix, to:audioEngine.outputNode, format: nil)
+        
+        PlayEngine(audioPlayerNode)
+    }
+
     func PlayAudioWithPitch(pitch:Float, rate:Float){
-        audioEngine.stop()
-        audioEngine.reset()
+        stopResetEngine()
         
         let audioPlayerNode =  AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         let changePitchEffect = AVAudioUnitTimePitch()
-        
         changePitchEffect.pitch = pitch
         changePitchEffect.rate = rate
+    
         audioEngine.attachNode(changePitchEffect)
         audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
         audioEngine.connect(changePitchEffect, to:audioEngine.outputNode, format: nil)
         
-        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        PlayEngine(audioPlayerNode)
+    }
+    
+    func stopResetEngine(){
+        audioEngine.stop()
+        audioEngine.reset()
+    }
+    
+    func PlayEngine(AudioNode:AVAudioPlayerNode){
+        AudioNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         do {
             try audioEngine.start()
         }catch _ {
             print("Play Audio was not Successful")
         }
-        audioPlayerNode.play()
+        AudioNode.play()
     }
+    
 }

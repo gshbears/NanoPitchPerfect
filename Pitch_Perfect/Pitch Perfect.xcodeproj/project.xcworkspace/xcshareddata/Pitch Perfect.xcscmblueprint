@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90AC576B98CDAEB21EBEFB70F08DF65A8473E9F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1F6AA02B5F3F24144A1260EF22742D749FD8974F" : 0,
+    "D33B59E34C1AD2844D0C08CD67B0A56C793063A1" : 0,
+    "90AC576B98CDAEB21EBEFB70F08DF65A8473E9F7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9F9FEE7E-1527-4474-94CE-AD26BBA84B98",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1F6AA02B5F3F24144A1260EF22742D749FD8974F" : "",
+    "D33B59E34C1AD2844D0C08CD67B0A56C793063A1" : "..",
+    "90AC576B98CDAEB21EBEFB70F08DF65A8473E9F7" : "Pitch%20Perfect"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Pitch Perfect",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pitch Perfect.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gshbears\/NanoPitchPerfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1F6AA02B5F3F24144A1260EF22742D749FD8974F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gshbears\/Pitch-Perfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90AC576B98CDAEB21EBEFB70F08DF65A8473E9F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gshbears\/PitchPerfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D33B59E34C1AD2844D0C08CD67B0A56C793063A1"
+    }
+  ]
+}
